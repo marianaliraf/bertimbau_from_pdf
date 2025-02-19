@@ -2,7 +2,7 @@
 """
 Created on Thu Jan  15 15:15:20 2025
 
-@authosr: mlfarias & yurifarod
+@authors: mlfarias & yurifarod
 """
 
 import os
@@ -42,7 +42,7 @@ def preprocess_text(text):
 
 
 # Função para dividir o texto respeitando o limite de 512 tokens
-def split_text(text, tokenizer, max_length=512):
+def split_text(text, tokenizer, max_length=256):
     tokens = tokenizer(
         text,
         truncation=True, 
@@ -57,8 +57,8 @@ def split_text(text, tokenizer, max_length=512):
         yield chunk_text
 
 # Carregando o modelo BERTimbau específico para NER
-#tokenizer = BertTokenizer.from_pretrained("neuralmind/bert-base-portuguese-cased")
-#model = BertForTokenClassification.from_pretrained("neuralmind/bert-base-portuguese-cased")
+#tokenizer = BertTokenizer.from_pretrained("neuralmind/bert-large-portuguese-cased")
+#model = BertForTokenClassification.from_pretrained("neuralmind/bert-large-portuguese-cased")
 
 model = BertForTokenClassification.from_pretrained('neuralmind/bert-base-portuguese-cased')
 tokenizer = BertTokenizer.from_pretrained('neuralmind/bert-base-portuguese-cased', do_lower_case=False)
