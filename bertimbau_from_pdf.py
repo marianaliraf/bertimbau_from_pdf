@@ -3,6 +3,13 @@
 Created on Thu Jan  15 15:15:20 2025
 
 @authors: mlfarias & yurifarod
+
+References:
+    https://www.kaggle.com/code/lucasldesouza/bertimbau-fine-tuning-com-hatebr
+    
+    https://huggingface.co/neuralmind/bert-base-portuguese-cased
+    
+    https://github.com/neuralmind-ai/portuguese-bert/
 """
 
 import os
