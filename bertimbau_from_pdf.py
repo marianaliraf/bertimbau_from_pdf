@@ -10,6 +10,10 @@ References:
     https://huggingface.co/neuralmind/bert-base-portuguese-cased
     
     https://github.com/neuralmind-ai/portuguese-bert/
+    
+    https://github.com/skaranjit/BertQA/blob/main/Bert.ipynb
+    
+    https://medium.com/analytics-vidhya/question-answering-system-with-bert-ebe1130f8def
 """
 
 import os
