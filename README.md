@@ -48,7 +48,7 @@ O projeto espera encontrar arquivos PDF organizados nas seguintes pastas:
 > Sua pergunta: Qual é a base de cálculo do ICMS?
 > Varrimento de texto concluído!
 Resposta: A base de cálculo do ICMS corresponde ao valor da operação...
-
+```
 
 ## 🔗 Fontes e Referências
 
