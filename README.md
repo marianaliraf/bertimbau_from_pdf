@@ -26,6 +26,8 @@ Este projeto é um modelo de **Perguntas e Respostas (Question Answering)** dese
 
 ```bash
 pip install pdfplumber nltk transformers
+
+pip install fuzzywuzzy
 ```
 Além disso, será necessário baixar os recursos de stopwords do NLTK:
 
