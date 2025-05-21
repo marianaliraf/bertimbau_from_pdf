@@ -16,6 +16,7 @@ import os
 import re
 import pdfplumber
 from nltk import tokenize
+from fuzzywuzzy import fuzz
 from string import punctuation
 from nltk.corpus import stopwords
 from transformers import pipeline
@@ -29,6 +30,8 @@ model_name = 'pierreguillou/bert-base-cased-squad-v1.1-portuguese'
 nlp = pipeline('question-answering', model = model_name)
 
 stopwords = set(stopwords.words('portuguese') + list(punctuation))
+
+
 
 #Extração dos PDFs 
 # Coletando PDFs das pastas especificadas
@@ -74,10 +77,12 @@ def buscar_trecho(perg, base_trechos):
     trecho = ""
 
     for entrada in base_trechos:
-        for termo in pergunta:    
-            if termo in entrada:
-                trecho = trecho + " " + entrada
-                break
+        for termo in pergunta:
+            for palavra in entrada:
+                x = fuzz.ratio(palavra,termo)
+                if x > 0.8:
+                    trecho = trecho + " " + entrada
+                    break
     
     return trecho
 
